@@ -67,10 +67,10 @@ int main(void) {
     }
     
     //Real code now
-    
+    t2 = 0.0;
     while (1){
         _CP0_SET_COUNT(0); //reset count for FPS calcs
-        blink(1, 5); //blink heartbeat
+        //blink(1, 5); //blink heartbeat
         burst_read_mpu6050(d); // read IMU
         az = conv_zXL(d); // convert data
         
@@ -79,7 +79,6 @@ int main(void) {
         drawMessage(toWrite, 0, 0);
         
         //calculate FPS
-        t2 = 24000000 /_CP0_GET_COUNT();
         
         //Print FPS
         sprintf(toWrite, "fps: %f", t2);
@@ -87,6 +86,7 @@ int main(void) {
         
         //Update screen
         ssd1306_update();
+        t2 = 24000000 /_CP0_GET_COUNT();
     }
 }
 

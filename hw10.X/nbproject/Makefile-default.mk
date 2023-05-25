@@ -100,8 +100,8 @@ ifneq ($(INFORMATION_MESSAGE), )
 endif
 	${MAKE}  -f nbproject/Makefile-default.mk ${DISTDIR}/hw10.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX}
 	@echo "--------------------------------------"
-	@echo "User defined post-build step: ["/Users/ben/Documents/ME433Things/ME433_2023-main/template/bootloader/nu32ultility" /dev/tty.usbserial-10 ${ImagePath}]"
-	@"/Users/ben/Documents/ME433Things/ME433_2023-main/template/bootloader/nu32ultility" /dev/tty.usbserial-10 ${ImagePath}
+	@echo "User defined post-build step: ["/Users/ben/Documents/ME433Things/ME433_2023-main/template/bootloader/nu32ultility" /dev/tty.usbserial-0232B141 ${ImagePath}]"
+	@"/Users/ben/Documents/ME433Things/ME433_2023-main/template/bootloader/nu32ultility" /dev/tty.usbserial-0232B141 ${ImagePath}
 	@echo "--------------------------------------"
 
 MP_PROCESSOR_OPTION=32MX170F256B

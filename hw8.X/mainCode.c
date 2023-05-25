@@ -70,7 +70,7 @@ int main(void) {
     t2 = 0.0;
     while (1){
         _CP0_SET_COUNT(0); //reset count for FPS calcs
-        //blink(1, 5); //blink heartbeat
+        //  blink(1, 5); //blink heartbeat
         burst_read_mpu6050(d); // read IMU
         az = conv_zXL(d); // convert data
         

@@ -18,10 +18,7 @@ int setup() {
 
 void setDuty(float degrees){
     float range = oneEightyMs - zeroMs;
-    char m[100];
     unsigned int duty = (((range * (degrees / 180.0f)) + zeroMs)/20) * (PR2Calced + 1);
-    sprintf(m, "%d\r\n", duty);
-    NU32DIP_WriteUART1(m);
     OC1RS = duty;
 }
 
